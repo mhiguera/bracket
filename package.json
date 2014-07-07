@@ -1,0 +1,15 @@
+{
+  "name": "bracket",
+  "version": "0.0.1",
+  "description": "Bracketing for Node.js",
+  "author": "Manuel de la Higuera <mhiguera@gmail.com",
+  "main": "bracket.js",
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mhiguera/bracket.git"
+  },
+
+  "engines": ["node >=0.8.0"],
+  "keywords": ["bracketing","profiling","logging","log","profile","bracket"]
+}
