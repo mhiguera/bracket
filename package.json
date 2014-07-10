@@ -1,6 +1,6 @@
 {
   "name": "bracket",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Bracketing for Node.js",
   "author": "Manuel de la Higuera <mhiguera@gmail.com",
   "main": "bracket.js",

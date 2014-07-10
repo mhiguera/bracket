@@ -16,6 +16,10 @@ Handler.defaultOptions = {
 
 Handler.prototype = {
   reset: function() {},
+  setLogger: function(logger) {
+    this.logger = logger;
+  },
+
   open: function(sub) {
     sub.snapshot = this.getSnapshot();
     if (this.logger == console) this.logger.log(sub.id);
