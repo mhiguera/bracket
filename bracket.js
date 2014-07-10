@@ -1,8 +1,6 @@
 var uidPrefix = process.pid;
 var uid = 0;
 var log = console;
-var openPrepend  =  '> ';
-var closePrepend = '< ';
 
 Bracket = function(handler) {
   if (!handler) throw new Error('Handler must be provided');
