@@ -1,9 +1,13 @@
 var format = require('util').format;
-Handler = function(logger) {
-  this.logger = logger || console;
+Handler = function(options) {
+  for (optionName in Handler.defaultOptions) {
+    optionValue = (options && options[optionName])? options[optionName] : null;
+    this[optionName] = optionValue || defaultOptions[options];
+  }
 }
 
-Handler.defaults = {
+Handler.defaultOptions = {
+  logger: console,
   threshold: {
     info: 100,
     warn: 500
@@ -19,21 +23,16 @@ Handler.prototype = {
   },
 
   logLevel: function(sub, elapsedTime) {
-    var defaults = Handler.defaults.threshold;
-    var warn = defaults.warn;
-    var info = defaults.info;
-    var _warn = null;
-    var _info = null;
+    var warnThreshold = this.threshold.warn;
+    var infoThreshold = this.threshold.info;
     try {
-      _warn = sub.data.threshold.warn;
-      _info = sub.data.threshold.info;
+      warnThreshold = sub.data.threshold.warn;
+      infoThreshold = sub.data.threshold.info;
     } catch(err) {
       // do nothing
     }
-    warn = (null !== _warn)? _warn : warn;
-    info = (null !== _info)? _info : info;
-    if (elapsedTime >= warn) return 'warn';
-    if (elapsedTime >= info) return 'info';
+    if (elapsedTime >= warnThreshold) return 'warn';
+    if (elapsedTime >= infoThreshold) return 'info';
     return null;
   },
 
