@@ -9,7 +9,11 @@ You may need a handler to do your evaluations. Bracket (version 0.0.1) is provid
 Changelog
 =========
 
-**0.0.2**
+**0.0.3** 
+
+* Bugfixes
+
+**0.0.2** 
 
 * ```Bracket.ProfilingHandler``` now admits an ```options``` argument making it easy to change the default configuration for brackets created using that particular handler.
 
