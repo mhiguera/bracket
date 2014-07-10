@@ -2,7 +2,7 @@ var format = require('util').format;
 Handler = function(options) {
   for (optionName in Handler.defaultOptions) {
     optionValue = (options && options[optionName])? options[optionName] : null;
-    this[optionName] = optionValue || Handler.defaultOptions[options];
+    this[optionName] = optionValue || Handler.defaultOptions[optionName];
   }
 }
 

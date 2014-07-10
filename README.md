@@ -9,7 +9,7 @@ You may need a handler to do your evaluations. Bracket (version 0.0.1) is provid
 Changelog
 =========
 
-**0.0.3** 
+**0.0.4-0.0.3** 
 
 * Bugfixes
 
